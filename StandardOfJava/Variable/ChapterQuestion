@@ -23,7 +23,7 @@ System.out.println(true+null) -> error
 Q4 char타입의 변수에 저장될 수 있는 정수 값의 범위는?
 0~65535
 
-Q5 타입의 기본값
+Q5 타입의 기본값 
 a. boolean = false
 b. char = '\u0000'
 c. float = 0.0f
