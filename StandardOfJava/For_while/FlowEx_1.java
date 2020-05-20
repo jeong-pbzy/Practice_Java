@@ -7,7 +7,7 @@ public class FlowEx_1 {
 		
 		for (int i = 1; i<=10; i++) {
 			sum += i ;
-			System.out.println(i + "±îÁöÀÇ ÇÕ:"+sum);
+			System.out.println(i + "Â±Ã®ÃÃ¶Ã€Ã‡ Ã‡Ã•:"+sum);
 		}
 
 	}
