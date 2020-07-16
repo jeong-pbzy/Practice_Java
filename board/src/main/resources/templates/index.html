@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<style>
+	body {
+		margin: 0px;
+		}
+		
+	.header{
+		height: 50px;
+		background: black;
+	} 
+	.header-wrapper {
+		height: inherit;
+		margin: 0 15px;
+	}
+	.header-right {
+		float: right;
+		margin-top: 20px;
+	}
+	.login-pharse {
+		font-size: 12px;
+		font-weight: bold;
+	}
+	a {
+	text-decoration: none;
+	color : white;
+	}
+	
+	.textOption {
+	text-decoration: none;
+	color : white;
+	margin-right : 10px;
+	}
+	
+	.content {
+	height: 80vh;
+	}
+	
+	.content-wrapper {
+		margin: 30px 20px 0 20px;
+		float: right;
+		}
+	
+</style>
+
+<script type="text/javascript">
+	function boardWrite() {
+		
+		location.href = "/board/write"
+	}
+	
+</script>
+</head>
+<body>
+	<div class="header">
+		<div class="header-wrapper">
+			<div class="header-right">
+				<p class="login-pharse textOption" th:if="${session.user_id !=null}" th:text="|${session.user_id}님 환영합니다|"></p>
+				<p class="login-pharse textOption" th:unless="${session.user_id != null}">
+					<a class="textOption" th:href="@{/user/login}">Login</a>
+					<a class="textOption" th:href="@{/user/signIn}">SIGN IN</a>
+				
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="content-wrapper">
+			<div>
+				<button type="button" th:onclick="'javascript:boardWrite();'">글쓰기</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
